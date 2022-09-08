@@ -11,7 +11,7 @@ cylArea :: Floating a => a -> a -> a
 cylArea h r = h * circleArea r
 
 -- Write a function that checks if the volume of a cylinder is greater than or equal to 42. Test that it works using GHCi.
-checkVolume42 :: (Floating a, Eq a) => a -> a -> Bool
+checkVolume42 :: (Floating a, Ord a, Eq a) => a -> a -> Bool
 checkVolume42 h r = 
     let vol = cylArea h r
     in vol >= 42.0
