@@ -14,4 +14,4 @@ cylArea h r = h * circleArea r
 checkVolume42 :: (Floating a, Eq a) => a -> a -> Bool
 checkVolume42 h r = 
     let vol = cylArea h r
-    in vol == 42.0
+    in vol >= 42.0
