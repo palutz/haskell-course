@@ -23,15 +23,16 @@ And to see the video, click on the button that looks like this:
 
 1. Clone this repository.
 2. Create a [GitPod](https://www.gitpod.io/) account.
-3. Click this button to create a remote dev environment: [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat&logo=visual-studio-code&logoColor=white)](https://gitpod.io/#https://github.com/rober-m/haskell-bootcamp)
-4. Select the `code/HomeworkXX` folder with the homework you want to complete.
+3. Click this button to create a remote dev environment: [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat&logo=visual-studio-code&logoColor=white)](https://gitpod.io/#https://github.com/input-output-hk/haskell-course)
+4. Select the `Homework/HomeworkXX` folder with the homework you want to complete.
 5. Follow the instructions inside the app/Main.hs file.
+6. Check the solutions in the "solutions" branch!
 
 #### Repository structure
 
     Haskell-Course
         |   |
-        |   |---- code
+        |   |---- Homework
         |          |
         |          |---- Homework01 (Homework for lesson 01)
         |          |---- Homework02 (Homework for lesson 02)
@@ -47,6 +48,10 @@ Everything else can be safely ignored
 ## FAQ
 
 [FAQ](FAQ.md)
+
+## Proposed changes for next iteration/version
+
+[Changes](Changes.md)
 
 ## What we'll cover
 
@@ -70,7 +75,9 @@ Everything else can be safely ignored
   - How to open and use GitPod
   - Example of how to complete a homework assignment.
 
-### 2. Data types, Signatures, and Polymorphism
+
+### 2. Data types, Signatures, and Polymorphism [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F02-Functions-Data-Types-and-Signatures.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/RABzYje2d2A)
+
 
 - Pragmatic intro to types
 - Type signature
@@ -90,7 +97,7 @@ Everything else can be safely ignored
   - Tuples + Tuples VS Lists
 - Polymorphic values and type variables
 
-### 3. Conditions and helper constructions
+### 3. Conditions and helper constructions [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F03-Conditions-and-helper-constructions.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=G0XPELNZuws)
 
 - If-then-else
 - Guards
