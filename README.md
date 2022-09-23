@@ -45,6 +45,11 @@ And to see the video, click on the button that looks like this:
 
 Everything else can be safely ignored
 
+## To hang out and discuss with other students
+
+- [Canvas](https://iohk.instructure.com/enroll/3BAAGG)
+- [IOG's technical community (check out the #ask-haskell channel!)](https://discord.gg/inputoutput)
+
 ## FAQ
 
 [FAQ](FAQ.md)
@@ -101,9 +106,10 @@ Everything else can be safely ignored
 
 - If-then-else
 - Guards
-- `let`
+- `let` expressions
 - `where`
-- Using `let` and `where` together
+- Should I use `let` or `where`?
+- Things to keep in mind
 
 ### 4. Pattern matching and Case
 
