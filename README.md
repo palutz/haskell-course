@@ -111,7 +111,7 @@ Everything else can be safely ignored
 - Should I use `let` or `where`?
 - Things to keep in mind
 
-### 4. Pattern matching and Case
+### 4. Pattern matching and Case [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F04-Pattern-matching.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=sQPGN4b95DU)
 
 - What is pattern matching
 - Pattern matching on
