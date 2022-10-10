@@ -15,7 +15,7 @@ getFourth _ = 0
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
 -- case expressions.
 removeIf3 :: [a] -> [a]
-removeIf3 (a:b:c:_) = []
+removeIf3 (_:_:_:xs) = []
 removeIf3 xs = xs 
 
 
