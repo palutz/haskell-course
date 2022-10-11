@@ -18,6 +18,12 @@ removeIf3 :: [a] -> [a]
 removeIf3 (_:_:_:xs) = []
 removeIf3 xs = xs 
 
+removeIf3' :: [a] -> [a]
+removeIf3' ls = 
+    case ls of 
+        (_:_:_:xs) -> []
+        lessThan3 -> lessThan3 
+
 
 -- Question 3
 -- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
