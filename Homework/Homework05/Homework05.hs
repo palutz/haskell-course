@@ -35,6 +35,8 @@ countVotes = foldl (\(x:xs) c ->
              [] . sort 
 
 -- Create a one-line function that filters `cars` by brand and then checks if there are any left.
-
 cars :: [(String,Int)]
 cars = [("Toyota",0), ("Nissan",3), ("Ford",1)]
+
+anyCarsLeft :: [(String, Int)] -> String -> Bool 
+anyCarsLeft cs brand = any (\(b, n) -> b == brand) cs
