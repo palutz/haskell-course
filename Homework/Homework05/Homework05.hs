@@ -1,3 +1,6 @@
+import Data.Char (isUpper)
+import Text.XHtml (coords)
+import Data.List (sort)
 -- Create a higher-order function that takes 3 parameters: A function and the two parameters that that function takes, and
 -- flips the order of the parameters.
 -- For example this: `(/) 6 2` returns `3`. But this: `flip' (/) 6 2` returns `0.3333333333`]
@@ -17,12 +20,19 @@ curry' f a b = f (a, b)
 
 -- Use higher-order functions, partial application, and point-free style to create a function that checks if a word has an uppercase letter.
 -- Start with using just higher-order functions and build from there. 
-
+hasUpper :: String -> Bool 
+hasUpper = any isUpper
 
 -- Create the `count` function that takes a team ("Red", "Blue", or "Green") and returns the amount of votes the team has inside `votes`.
-
 votes :: [String]
 votes = ["Red", "Blue", "Green", "Blue", "Blue", "Red"]
+
+countVotes :: [String] -> [(String, Int)]
+countVotes = foldl (\(x:xs) c -> 
+                    case x:xs of
+                        ((c, n):xs)  -> (c, n + 1) : xs
+                        otherwise -> (c, 1) : (x:xs))
+             [] . sort 
 
 -- Create a one-line function that filters `cars` by brand and then checks if there are any left.
 
