@@ -22,21 +22,21 @@ curry' f a b = f (a, b)
 -- Start with using just higher-order functions and build from there. 
 hasUpper :: String -> Bool 
 hasUpper = any isUpper
+hasUpper' :: String -> Bool 
+hasUpper' = any (`elem` ['A'..'Z'])
 
 -- Create the `count` function that takes a team ("Red", "Blue", or "Green") and returns the amount of votes the team has inside `votes`.
 votes :: [String]
 votes = ["Red", "Blue", "Green", "Blue", "Blue", "Red"]
 
-countVotes :: [String] -> [(String, Int)]
-countVotes = foldl (\(x:xs) c -> 
-                    case x:xs of
-                        ((c, n):xs)  -> (c, n + 1) : xs
-                        otherwise -> (c, 1) : (x:xs))
-             [] . sort 
+countVotes :: String -> [String] -> Int 
+countVotes team = length . filter(== team) 
 
 -- Create a one-line function that filters `cars` by brand and then checks if there are any left.
 cars :: [(String,Int)]
 cars = [("Toyota",0), ("Nissan",3), ("Ford",1)]
 
-anyCarsLeft :: [(String, Int)] -> String -> Bool 
-anyCarsLeft cs brand = any (\(b, n) -> b == brand) cs
+anyCarsLeft :: String -> [(String, Int)] -> Bool 
+anyCarsLeft br = not . null . filter(\(b, _) -> b /= br)
+-- shorter version 
+-- anyCarsLeft br = any (\(b, _) -> b /= br)
