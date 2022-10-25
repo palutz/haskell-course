@@ -26,16 +26,15 @@ No. There are special cases like IORef and other mutable objects (and data struc
 Type signatures can show explicitly the types we are planning (helping also the Haskell compiler) to use and explain better the functionality of the methods. 
 
 
--- Question 4
+-- Question 3
 -- Why should you define type signatures for variables? How can they help you?
 In the same way, type signature show the possible use of a variable
 
--- Question 5
+-- Question 4
 -- Are there any functions in Haskell that let you transform one type to the other? Try googling for the answer.
 Mappers like map 
 
-
--- Question 6
+-- Question 5
 -- Can you also define in Haskell list of lists? Did we showed any example of that? How would you access the inner
 -- most elements?
 Yes we can. Don't know. We can use a combinations of head, tail or !! like for a normal list 

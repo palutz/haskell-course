@@ -66,6 +66,12 @@ Everything else can be safely ignored
 
 **If there are no buttons on a lesson, it means that it's not published yet.**
 
+---
+
+### START OF THE BEGINNER SECTION 🐣⟶🐥
+
+---
+
 ### 1. Intro and tools [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F01-Introduction-to-haskell.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/pkU8eiNZipQ)
 
 - Intro to the course and lectures
@@ -245,6 +251,21 @@ Everything else can be safely ignored
 - HaskellWiki
 - Walking through while teaching Map module
 
+---
+
+### END OF THE BEGINNER SECTION 🐥
+
+---
+
+#### Congratulations! 🥳 You can call yourself a (beginner) Haskell programmer!
+#### YOU'RE READY FOR THE MARLOWE PIONEER PROGRAM! 🥳🎉 (Keep going for Plutus.)
+
+---
+
+### START OF THE INTERMEDIATE SECTION 🐥⟶🐓
+
+---
+
 ### 15. Monoid
 
 - Basic idea (definition without details)
@@ -269,12 +290,6 @@ Everything else can be safely ignored
 ### 18. Aeson
 
 - Aeson
-
----
-
-#### YOU'RE READY FOR MARLOWE! 🥳🎉 (Keep going for Plutus.)
-
----
 
 ### 19. Monad
 
