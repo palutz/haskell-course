@@ -1,22 +1,28 @@
 -- Question 1
 -- Write a function called `repeat'` that takes a value and creates an infinite list with
 -- the value provided as every element of the list.
---
 -- >>> repeat 17
 --[17,17,17,17,17,17,17,17,17...
-
+repeat' :: a -> [a]
+repeat' x = x : repeat' x 
 
 -- Question 2
 -- Using the `repeat'` function and the `take` function we defined in the lesson (comes with Haskell),
 -- create a function called `replicate'` that takes a number `n` and a value `x` and creates a list
 -- of length `n` with `x` as the value of every element. (`n` has to be Integer.)
 --
+
+replicateN :: Int -> a -> [a]
+replicateN n = take n . repeat'
 -- >>> replicate 0 True
+r0=  replicateN 0 True
 -- []
 -- >>> replicate (-1) True
+rm1 = replicateN (-1) True
 -- []
 -- >>> replicate 4 True
 -- [True,True,True,True]
+r4 = replicateN 4 True
 
 
 -- Question 3
@@ -24,6 +30,11 @@
 --
 -- >>> concat' [[1,2],[3],[4,5,6]]
 -- [1,2,3,4,5,6]
+concat' :: [[a]] -> [a]
+concat' = foldr(\x acc -> x ++ acc) [] 
+
+concat2' :: [[a]] -> [a]
+concat2' = foldr(++) [] 
 
 
 -- Question 4
@@ -35,7 +46,6 @@
 --
 -- If one input list is shorter than the other, excess elements of the longer
 -- list are discarded, even if one of the lists is infinite:
---
 -- >>> zip' [1] ['a', 'b']
 -- [(1,'a')]
 -- >>> zip' [1, 2] ['a']
@@ -44,7 +54,10 @@
 -- []
 -- >>> zip' [1..] []
 -- []
-
+zip' :: [a] -> [b] -> [(a,b)]
+zip' [] _ = []
+zip' _ [] = []
+zip' (x:xs) (y:ys) = (x,y) : zip' xs ys
 
 
 -- Question 5
@@ -59,6 +72,10 @@
 --
 -- >>> zipWith (+) [1, 2, 3] [4, 5, 6]
 -- [5,7,9]
+zipWith' :: (a->b->c) -> [a] -> [b] -> [c]
+zipWith' _ [] _ = []
+zipWith' _ _ [] = []
+zipWith' f (x:xs) (y:ys) = f x y : zipWith' f xs ys
 
 
 -- Question 6
@@ -71,11 +88,23 @@
 -- [1,2,3]
 -- >>> takeWhile (< 0) [1,2,3]
 -- []
-
+takeWhile' :: (a -> Bool) -> [a] -> [a]
+takeWhile' _ [] = []
+takeWhile' f (x:xs) 
+            | f x = x : takeWhile' f xs 
+            | otherwise = takeWhile' f xs
 
 -- Question 7 (More difficult)
 -- Write a function that takes in an integer n, calculates the factorial n! and
 -- returns a string in the form of 1*2* ... *n = n! where n! is the actual result.
+factorialStr :: Int -> String
+factorialStr n = 
+  f2 :: Int -> Int -> String -> String
+  f2 idx res str 
+    | idx > 0 = inner (idx - 1) (res * idx) (show idx : "*" : str)
+    | otherwise = str
+
+  f2 n 1 ""
 
 
 -- Question 8
