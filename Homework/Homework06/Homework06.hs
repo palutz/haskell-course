@@ -131,8 +131,10 @@ deliveryCost = 8.50
 
 orderCost :: [(String, Double)] -> Double -> [(String, Double)] -> Double
 orderCost order delivCost priceList = 
-  delivCost + foldr ((+) . (\(name, num) -> num * getPrice name)) 0.0 order 
--- delivCost + foldr (+) 0.0 (map (\(name, num) -> num * getPrice name) order)  -- "expanded" version 
+  delivCost + foldr ((+) . getItemCost getPrice) 0.0 order 
+-- delivCost + foldr (+) 0.0 (map (\(name, num) -> num * getPrice name) order)  -- version with map
       where
+        getItemCost :: (String -> Double) -> (String, Double) -> Double -- version with HOF defs
+        getItemCost f (name,num) = f name * num
         getPrice :: String -> Double
         getPrice item = snd $ foldr (\(s, c) acc -> if s == item then (s, c) else acc) ("", 0.0) priceList -- filter but with a default value even if the value is not present
