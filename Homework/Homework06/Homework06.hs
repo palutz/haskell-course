@@ -98,14 +98,13 @@ takeWhile' f (x:xs)
 -- Write a function that takes in an integer n, calculates the factorial n! and
 -- returns a string in the form of 1*2* ... *n = n! where n! is the actual result.
 factorialStr :: Int -> String
-factorialStr n = 
-  f2 :: Int -> Int -> String -> String
-  f2 idx res str 
-    | idx > 0 = inner (idx - 1) (res * idx) (show idx : "*" : str)
-    | otherwise = str
-
-  f2 n 1 ""
-
+factorialStr n = strOps ++ " = " ++ show resOps
+                where 
+                  -- if n>1 add 1 will complete the string (1*2*3..) otherwise just put n as a string
+                  strOps = if n > 1 then '1':fst ops else show n
+                  resOps = snd ops 
+                  ops :: ([Char], Int)
+                  ops = foldr (\x (str,res) -> ("*" ++ show x ++ str, res * x)) ("", 1) [2..n] -- using foldr the string will be already in the right order with "*2*3..."
 
 -- Question 8
 -- Below you have defined some beer prices in bevogBeerPrices and your order list in
@@ -129,3 +128,11 @@ orderList =
 
 deliveryCost :: Double
 deliveryCost = 8.50
+
+orderCost :: [(String, Double)] -> Double -> [(String, Double)] -> Double
+orderCost order delivCost priceList = 
+  delivCost + foldr ((+) . (\(name, num) -> num * getPrice name)) 0.0 order 
+-- delivCost + foldr (+) 0.0 (map (\(name, num) -> num * getPrice name) order)  -- "expanded" version 
+      where
+        getPrice :: String -> Double
+        getPrice item = snd $ foldr (\(s, c) acc -> if s == item then (s, c) else acc) ("", 0.0) priceList -- filter but with a default value even if the value is not present
