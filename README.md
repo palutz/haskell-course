@@ -1,4 +1,4 @@
-# Haskell Course 
+# Haskell Course
 
 [Versión en 🇪🇸](https://github.com/input-output-hk/haskell-course/tree/main/ES-translation)
 
@@ -144,26 +144,25 @@ Everything else can be safely ignored
 
 - Why Recursion?
 - Thinking Recursively
-    - `sum` and `product`
+  - `sum` and `product`
 - Steps to create your own recursive function
 - Examples of recursion
-    - `and`, `length`, `reverse`, `drop`, `take`, `map`, `filter`
+  - `and`, `length`, `reverse`, `drop`, `take`, `map`, `filter`
 - Extracting the `foldr` pattern
 - The `foldl` function
 - The `foldl'` function
 - When to use `foldr`, `foldl`, and `foldl'`
 
-### 7. Intro to Type Classes
+### 7. Intro to Type Classes [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F07-Intro-to-Type-Classes.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=dGNd0GmsYWU)
 
-- What are type classes?
+- The awesomeness of type classes
+- What are type classes
 - Common type classes
-  - `Eq`
-  - `Ord`
-  - `Integral`
-  - `Floating`
-  - `Num`
-  - Mentioning `Read`, `Show`, `Enum`, `Bounded`, and `Foldable`.
-- Class constraints with examples
+  - `Eq`, `Ord`
+  - `Num`, `Integral`, `Floating`
+  - `Read`, `Show`
+- The most general valid type
+- Multiple constraints
 
 ### 8. Creating Types
 
@@ -231,7 +230,6 @@ Everything else can be safely ignored
 - Lazy and strict byte strings
 - Example
 
-
 ### 13. Maybe and Either (only practical use)
 
 - Maybe
@@ -258,6 +256,7 @@ Everything else can be safely ignored
 ---
 
 #### Congratulations! 🥳 You can call yourself a (beginner) Haskell programmer!
+
 #### YOU'RE READY FOR THE MARLOWE PIONEER PROGRAM! 🥳🎉 (Keep going for Plutus.)
 
 ---
