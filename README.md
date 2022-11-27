@@ -175,17 +175,17 @@ Everything else can be safely ignored
   - Value parameters
 - Record syntax
 
-### 9. Creating Parameterized and Recursive Types
+### 9. Creating Parameterized and Recursive Types [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F09-Creating-parameterized-and-recursive-types.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=wPV94aZIOGQ)
 
 - Type Parameters
-  - Prameteryzing type synonyms
-  - Prameteryzing data types
+  - Prameteryzing `type` synonyms
+  - Prameteryzing `data` types
 - Recursive data types
   - `Tweet` me a river
   - A `Sequence` of `Node`s
   - A `Tree` of `Node`s
-- The `newType` keyword
 - Kinds
+- The `newType` keyword
 
 ### 10. Creating Type Classes and Instances
 
