@@ -53,3 +53,38 @@ still need to make another choice.
 
 6. Adapt adapt "solveMaze" function to use "showCurrentChoice" and play with your new game using GHCi! :D
 -}
+
+module Maze where 
+
+data Move =
+    GoLeft
+    | GoForward 
+    | GoRight 
+    deriving (Eq, Show)
+
+data MazeState = 
+    Inside
+    | HitWall
+    | Outside
+    deriving (Eq, Show)
+
+-- data Maze = Maze {
+--     movesLeft :: [Move],
+--     mazeState :: MazeState
+-- } deriving (Eq, Show)
+
+type Maze = [Move]
+
+move :: Move -> Maze -> Maze 
+move _ [] = [] 
+move mv (x:xs)
+    | mv == x = xs
+    | otherwise = x:xs
+
+solveMaze :: Maze -> Move -> Maze
+solveMaze = _ 
+
+testMaze :: Maze 
+testMaze = [GoLeft, GoForward, GoForward, GoRight, GoRight, GoForward]
+
+    
