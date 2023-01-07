@@ -36,10 +36,7 @@ It should look like this:
 How are you going to achieve this? You can try it on your own, but here you have a
 step-by-step just in case:
 
-1. Write two data types. One for the moves (Move) you can make, and another for the maze (Maze).
-(Use the example above to figure them out.)
 
-2. Write a function called "move" that takes a maze and a move and returns the maze after the move.
 
 3. Write a "testMaze" value of type "Maze" and test the "move" function in GHCi.
 
@@ -55,7 +52,10 @@ still need to make another choice.
 -}
 
 module Maze where 
-
+{--
+1. Write two data types. One for the moves (Move) you can make, and another for the maze (Maze).
+(Use the example above to figure them out.)
+--}
 data Move =
     GoLeft
     | GoForward 
@@ -75,6 +75,7 @@ data MazeState =
 
 type Maze = [Move]
 
+-- 2. Write a function called "move" that takes a maze and a move and returns the maze after the move.
 move :: Move -> Maze -> Maze 
 move _ [] = [] 
 move mv (x:xs)
