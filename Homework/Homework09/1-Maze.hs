@@ -37,12 +37,6 @@ How are you going to achieve this? You can try it on your own, but here you have
 step-by-step just in case:
 
 
-
-3. Write a "testMaze" value of type "Maze" and test the "move" function in GHCi.
-
-4. Write the "solveMaze" function that will take a maze and a list of moves and returns the maze
-after making those moves.
-
 5. If you test the "solveMaze" function, you'll see that each time you try to solve the maze,
 it'll print the whole maze for the player to see. To avoid that, write a "showCurrentChoice" function
 that takes a maze and returns a different string depending on if you hit a wall, found the exit, or
@@ -62,30 +56,34 @@ data Move =
     | GoRight 
     deriving (Eq, Show)
 
-data MazeState = 
-    Inside
-    | HitWall
-    | Outside
-    deriving (Eq, Show)
+type Maze = [Move]
 
 -- data Maze = Maze {
 --     movesLeft :: [Move],
 --     mazeState :: MazeState
 -- } deriving (Eq, Show)
 
-type Maze = [Move]
 
 -- 2. Write a function called "move" that takes a maze and a move and returns the maze after the move.
 move :: Move -> Maze -> Maze 
-move _ [] = [] 
-move mv (x:xs)
-    | mv == x = xs
-    | otherwise = x:xs
+move _ [] = []
+move m (x:xs)
+  | m == x    = xs
+  | otherwise = x:xs
 
-solveMaze :: Maze -> Move -> Maze
-solveMaze = _ 
 
+-- 3. Write a "testMaze" value of type "Maze" and test the "move" function in GHCi.
 testMaze :: Maze 
 testMaze = [GoLeft, GoForward, GoForward, GoRight, GoRight, GoForward]
 
-    
+
+-- 4. Write the "solveMaze" function that will take a maze and a list of moves and returns the maze
+-- after making those moves.
+solveMaze :: Maze -> [Move] -> Maze
+-- solveMaze [] _ = []
+-- solveMaze maze [] = maze
+-- solveMaze maze (x:xs) = solveMaze (move x maze) xs
+-- shorten version
+solveMaze maze moves = foldl (flip move) maze moves 
+-- even shorter 
+-- solveMaze = foldl (flip move) 
