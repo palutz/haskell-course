@@ -30,16 +30,23 @@
 
 
 -- Question 4
--- Add type signatures to the functions below and use type variables and type classes.
+-- Add the most general type signatures possible to the functions below.
 -- Then uncomment the functions and try to compile.
 f1 :: (Show a, Fractional a) => a -> a -> [Char] -> [Char]
 f1 x y z = show (x / y) ++ z
 
+<<<<<<< HEAD
 f2 :: (Bounded a, Enum a, Eq a) => a -> a
 f2 x = if x == maxBound then minBound else succ x
 
 f2' :: (Bounded a, Enum a, Eq a) => a -> a
 f2' x = if x == maxBound then minBound else succ x
+=======
+--f1 x y z = show (x / y) ++ z
+
+--f2 x = if x == maxBound then minBound else succ x
+
+>>>>>>> a665d15e1d810766953c5450f94225a26af61723
 
 -- Question 5
 -- Investigate the numeric type classes to figure out which behaviors they provide to change between numeric types.

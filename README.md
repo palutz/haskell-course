@@ -68,7 +68,8 @@ Everything else can be safely ignored
 
 ---
 
-### START OF THE BEGINNER SECTION 🐣⟶🐥
+### BEGINNER SECTION - GETTING STARTED WITH HASKELL - 🥚⟶🐣
+In this section, we get familiar with basic concepts and Haskell syntax.
 
 ---
 
@@ -218,28 +219,34 @@ Everything else can be safely ignored
 - The `main` action
 - Concepts and syntax recap
 
-### 12. Pragmas, Modules, and Cabal
+---
 
-- Prelude
-- pragmas/extensions
-- Overview of base modules
-- Importing base modules
-- A few modules
-  - Data.Char
-  - Data.Tuple
-  - Data.Array
-- Creating our own modules
-- Cabal
-  - What is it and why we use it
-  - Cabal file
-  - Using external libraries with Cabal
+### BEGINNER SECTION - GAINING INDEPENDENCE - 🐣⟶🐥
+In this section, we learn about Haskell tooling and the necessary concepts to start working on our own projects.
 
-### 13. Bits and Bytes
+---
 
-- Grouping bits and bytes
-- Haskell and bytes
-- Lazy and strict byte strings
-- Example
+### 12. Installing Haskell Locally [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F12-Installing-Haskell-and-first-program.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=hSN5mxITv0A&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=13)
+
+- Installing Haskell
+    - Installing GHCup
+    - Installing GHC, Cabal, Stack, and HLS with GHCup
+    - Installing VSCode Extensions
+- Creating our first program
+    - Writing the simplest Haskell program
+    - Compiling and running our program
+
+### 13. Modules [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F13-Modules.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=R64sCXU0Ru0&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=14)
+
+- Importing Modules
+    - Controlling environments
+    - Controlling namespaces
+- Creating our own Modules
+- The Prelude and Standard Libraries
+
+### 14. Cabal and language extensions
+
+- TODO
 
 ### 14. Handling Errors
 
@@ -254,46 +261,43 @@ Everything else can be safely ignored
 
 ---
 
-### END OF THE BEGINNER SECTION 🐥
-
----
-
-#### Congratulations! 🥳 You can call yourself a (beginner) Haskell programmer!
+#### Congratulations! 🥳 You can call yourself a (beginner) Haskell developer!
 
 #### YOU'RE READY FOR THE MARLOWE PIONEER PROGRAM! 🥳🎉 (Keep going for Plutus.)
 
 ---
 
-### START OF THE INTERMEDIATE SECTION 🐥⟶🐓
+### INTERMEDIATE SECTION - BASIC ABSTRACTIONS - 🐥⟶🐓
+In this section, we learn about a few of the most useful and talked about Abstractions in Haskell.
 
 ---
 
-### 16. Monoid
+### x. Monoid
 
 - Basic idea (definition without details)
 - Intuitive examples
 - Extracting the pattern
 - Complete definition (with all the details/laws)
 
-### 17. Functor
+### x. Functor
 
 - Basic idea (definition without details)
 - Intuitive examples
 - Extracting the pattern
 - Complete definition (with all the details/laws)
 
-### 18. Applicative
+### x. Applicative
 
 - Basic idea (definition without details)
 - Intuitive examples
 - Extracting the pattern
 - Complete definition (with all the details/laws)
 
-### 19. Aeson
+### x. Aeson
 
-- Aeson
+- TODO (some project using Aeson)
 
-### 20. Monad
+### x. Monad
 
 - Basic idea (definition without details)
 - Intuitive examples
@@ -301,28 +305,28 @@ Everything else can be safely ignored
 - Complete definition (with all the details/laws)
 - `do` notation in general
 
-### 21. Reader Monad
+### x. Reader Monad
 
 - Incentive/Motivation
 - Binding strategy (see [here](https://wiki.haskell.org/All_About_Monads#The_Reader_monad))
 - Definition
 - Examples
 
-### 22. Writer Monad
+### x. Writer Monad
 
 - Incentive/Motivation
 - Binding strategy
 - Definition
 - Examples
 
-### 23. State Monad
+### x. State Monad
 
 - Incentive/Motivation
 - Binding strategy
 - Definition
 - Examples
 
-### 24. Monadic functions / Operating with Monads
+### x. Monadic functions / Operating with Monads
 
 - liftM
 - sequence and sequence\_
@@ -330,4 +334,17 @@ Everything else can be safely ignored
 - filterM
 - foldM
 
+---
+
 ### TODO: It keeps going, but I'm not sure about the outline yet. 😬
+
+Possible subjects:
+- Testing
+- TLP
+- Template Haskell
+- More abstractions
+- Programming patterns
+
+---
+
+
